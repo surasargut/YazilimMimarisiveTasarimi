@@ -72,8 +72,11 @@ class Musteri
 
 
 Client-> istemcidir. 
+
 Facade -> istemcinin alt sisteme daha da kolay ulaşmasını sağlayan arayüz.
+
 musteri-> kullanıcı bilgilerini bulundurur.
+
 alt sistem (Kredi,Banka,MerkezBanka)-> istemciden gelen (facade yoluyla) işin yapılması için geeken ön şartların kontrolünü gerçekleştirir.
 
 
@@ -174,10 +177,13 @@ class ThyUcak : AbsUcak
 
 mediator tasarım deseninde 4 temel yapı bulunur.
 
--Mediator--> Nesneler arasındaki ilişkiyi sağlayacak metotların tanımlı olduğu arayüz.
--ConcreteMediator--> Nesneler arasındaki ilişkiyi sağlayacak gerçek nesnedir. Mediator arayüzünü uygular. İçinde Colleague ara yüzünden türeyen nesnelerin listesini barındırır.
--Colleague--> ConcreteMediator u kullanarak işlem gerçekleştirecek olan nesnelerin uygulaması gereken arayüzü temsil eder. Kendi içinde ConcreteMediator nesnesi barındırır.
--ConcreteColleague--> ConcreteMediator üzerinden birbirleri ile ilişkili nesnelerdir. Colleague arayüzünü uygularlar.
+Mediator--> Nesneler arasındaki ilişkiyi sağlayacak metotların tanımlı olduğu arayüz.
+
+ConcreteMediator--> Nesneler arasındaki ilişkiyi sağlayacak gerçek nesnedir. Mediator arayüzünü uygular. İçinde Colleague ara yüzünden türeyen nesnelerin listesini barındırır.
+
+Colleague--> ConcreteMediator u kullanarak işlem gerçekleştirecek olan nesnelerin uygulaması gereken arayüzü temsil eder. Kendi içinde ConcreteMediator nesnesi barındırır.
+
+ConcreteColleague--> ConcreteMediator üzerinden birbirleri ile ilişkili nesnelerdir. Colleague arayüzünü uygularlar.
 
 
 

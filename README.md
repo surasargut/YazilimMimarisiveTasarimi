@@ -5,12 +5,12 @@
 - Facade tasarım deseni, Structural tasarım deseninin bir örneğidir.Facade, varolan bir sistemi spesifik bir iş açısından farklı açıdan ele almayı veya mevcut arayüzleri kullanarak daha yüksek seviyede bir işi daha basit şekilde yapmayı tanımlar. Örneğin çok karmaşık bir sınıf kütüphaneniz veya çok karmaşık bir modülünüz var. Çoğu zaman belirli bir işlemi yapmak için çok fazla sayıda nesne üretmeniz ve onlar arasında çeşitli ilişkiler kurmanız gerekir. Bunu sıkça yaptığınız için çoğu zaman kopyala yapıştır yapmanız olasıdır. Facade tasarım desenine göre ise belirli bir işi büyük bir kütüphane içerisinde sık sık yapıyorsak, bu iş için özelleştirilmiş yüksek seviyeli bir arayüz tanımlamak kısa vadede fayda getirecektir.
 
 
-![Image of Class](facade_uml.png)
+![Image of Class](https://github.com/surasargut/YazilimMimarisiveTasarimi/blob/master/YazilimMimarisiveTasarimi/facade_uml.png)
 
 
 - Facade tasarım deseni alt sistemin içeriğini olşturan tiplerim kullanımını istemciden soyutlamakla kalmıyor aynı zamanda kulllanımını daha da kollaylaştırıyor.  İstemci alt sistemdeki parçalara doğrudan ulaşmak zorunda kalmıyor, isteklerini facade üzerinden karşılıyor.
 
-![Image of Class](facadeUml.png)
+![Image of Class](https://github.com/surasargut/YazilimMimarisiveTasarimi/blob/master/YazilimMimarisiveTasarimi/facadeUml.png)
 
 Facade programdan gelen yani sistemmden gelen talepleri alt sisteme ilerletmekle ve alt sistemi kullaıp geriye cevap göndermekle sorumlu bir arayüz. Musteri classı burada yardımcı tip olarak ele alınabilir. Kredi classında müşterinin ```KrediKullanmaDurumu()```  true olarak ele alınıyor. Bu işlemleri müşterinin bankadan para çekmesi için öngörülen şartlar olarak düşünebiliriz. Banka ve MerkezBanka Classında da ```KrediyiKullan()``` ve ```KaraListeKontrol()``` fonksiyonları bool tipinde kontrol ediliyor. 
 
@@ -84,7 +84,7 @@ alt sistem (Kredi,Banka,MerkezBanka)-> istemciden gelen (facade yoluyla) işin y
 -Mediator design pattern (aracı tasarım deseni), behavior grubununa ait, çalışmaları birbirleri ile aynı arayüzden türeyen nesnelerin durumlarına bağlı olan nesnelerin davranışlarını düzenleyen tasarım desenidir. Bazı durumlarda nesnelerin davranışları kendi türünden başka nesnelere bağlı olabilir. Mediator tasarım deseni birbirleri ile ilişkili olan bu nesneler arasında ki iletişimin ana bir nesne üzerinden (mediator) yapılmasını sağlar. Böylece nesneler arasındaki bağ zayıflatılır ve geliştirme aşamasında kod karmaşasını önler ve kodun yönetilmesini kolaylaştırır. 
 
 
-![Image of Class](mediator_uml.png)
+![Image of Class](https://github.com/surasargut/YazilimMimarisiveTasarimi/blob/master/YazilimMimarisiveTasarimi/mediator_uml.png)
 
 
 - Örneğin hava alanı kontrolünü düşünelim. Eğer uçaklar iniş, kalkış işlemleri için kule ile değil de birbirleri arasında direkt haberleşerek davransalar; bir uçak bir işlem yapacağı zaman ilgili bütün uçaklarla nasıl iletişime geçeceğini bilmesi ve iletişime geçmesi gerekirdi. Hava alanı kontrolünü mediator deseni ile düşünelim. İlk olarak uçaklar ve kule (aslında farklı hava alanları da olacağından kuleler) gereklidir ve bunların birbirleri ile nasıl iletişime geçeceklerini belirten operasyon tanımlamaları olması gereklidir. Kulenin gerçekleştireceği iniş – kalkış izni vermek gibi operasyonlar “Mediator” arayüzünü temsil eder ve kendisine bağlı olan nesnelerin yani uçakların bilgilerini kendi içinde tutar. Her bir kule de ConcreteMediator yapısına denk düşer ve kendisine bağlı olan uçaklar ile iletişime geçer. Uçakların gerçekleştireceği iniş – kalkış istemek gibi operasyonların tanımlanması ise “Colleague” arayüzünü temsil eder. Uçaklar ise “ConcreteColleague” yapısına denk düşer ve içinde ilgili “Mediator” tipinden nesneyi barındırır.
@@ -93,7 +93,7 @@ alt sistem (Kredi,Banka,MerkezBanka)-> istemciden gelen (facade yoluyla) işin y
 Bu senaryo üzerinden örnek bir uygulama geliştirelim. Uygulamamızın class diyagramı aşağıdaki gibi olur.
 
 
-![Image of Class](mediatorUml.png)
+![Image of Class](https://github.com/surasargut/YazilimMimarisiveTasarimi/blob/master/YazilimMimarisiveTasarimi/mediatorUml.png)
 
 
 ```C#
